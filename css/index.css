@@ -41,6 +41,7 @@ a {
     text-decoration: none;	
     color: black;
     font-size:2.5rem;	
+    
 }	
 a:hover {	
     font-weight: bold;	
@@ -133,4 +134,57 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+@media (max-width: 500px ) {
+    nav a {
+        justify-content: space-evenly;
+        margin-left: 5%;
+        margin-right: 10%;
+    }
+    .title-container div {
+        width: 100%;
+    }
+    .artists-container {
+        display: flex;
+        flex-direction: column;
+        align-content: right;
+       padding-bottom: 40%;
+        padding-left: 10%;
+       
+       
+        
+    }
+    .artists-container a {
+       
+        padding-top: 15%;
+        padding-bottom: 15%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        font-size: 1.8rem;
+        width: 200%;
+        align-content: center;
+        text-align: right;
+        
+    }
+    .artist a {
+        justify-content: space-around;
+    }
+    .artist img {
+        width: 200%;
+        height: auto;
+        flex-wrap: nowrap;
+
+
+    }
+    .bio {
+        font-size: 1.2rem;
+        width: 200%;
+        text-align: center;
+    }
+    .title-container hr {
+        width: 100%;
+        
+    }
+
 }
