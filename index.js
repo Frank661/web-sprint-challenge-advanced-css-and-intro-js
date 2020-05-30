@@ -207,11 +207,14 @@ const artists = [
 
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
-
-
+console.log("task 1")
+console.log(artists[0].name);
+console.log(artists[2].bio)
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-
+console.log('task 2')
+console.log(artists[8].name = 'Vincent Van Gogh');
+console.log(artists[8].name);
 
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
@@ -222,20 +225,30 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
+
+console.log('task 3')
+
+function getArtistByIndex(artists, id) {
+    return 'The artist at index '+ id + ' is ' + artists[id].name ;
   }
   
+console.log(getArtistByIndex(artists, 3));
+
   /**
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1900-2000) */
-
-function get20s(/* Code here */){
-
-  /* Code here */
+console.log('task 4 incomplete')
+function get20s(){
+  for( let i = 0; i < artists.length; i++) {
+    if ( artists[i].years < '2000'){ return artists.name }
+  }
+  
+  
 
 }
+
+console.log(get20s());
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -248,10 +261,14 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
-  }
-  
+console.log('task 5')
+function removeArtist(artists, index) {
+    artists.splice(index, 1)
+     return artists.length
+}
+  console.log(removeArtist(artists, 0));
+
+  console.log(artists)
   /**
 
 
@@ -268,12 +285,20 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) 
 
 At the end, this function should console.log() the new array with information added"*/
+console.log('task 6')
+function addArtist(){
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+    artists.push({
+      "id": 23,
+      "name": 'Francisco Hernandez', 
+      "years": '1996-2020',
+      "genre": 'Web Design', 
+      "nationality": 'Mexican',
+      "bio":'Born a baby, Frank cam into this worl not know a single word. As time passed he became smarter and is now learning how to code and is becoming a full stack web developer. ' , 
+    }) 
+    return artists[19]
   }
+  console.log(addArtist())
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -282,12 +307,15 @@ function addArtist(/* Code here */){
 and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
+console.log('task 7')
+function lotsOfArt(){
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+   for ( i = 0; i < 10; i + 1 ) {
+     artists[i]
+   }
+   
 }
+console.log(lotsOfArt());
 
 
 
