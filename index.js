@@ -238,18 +238,18 @@ console.log(getArtistByIndex(artists, 3));
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1900-2000) */
-console.log('task 4 incomplete')
-function get20s(){
-  for( let i = 0; i < artists.length; i++) {
-    if ( artists[i].years < '2000'){ return artists.name }
+console.log('task 4 ')
+function get20s(artists){
+  for( i = 0; i < artists.length; i++) {
+    if ( artists[i].years > '1900' ){ 
+      console.log(artists[i].name) }
   }
   
   
 
 }
 
-console.log(get20s());
-
+console.log(get20s(artists));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -294,7 +294,7 @@ function addArtist(){
       "years": '1996-2020',
       "genre": 'Web Design', 
       "nationality": 'Mexican',
-      "bio":'Born a baby, Frank cam into this worl not know a single word. As time passed he became smarter and is now learning how to code and is becoming a full stack web developer. ' , 
+      "bio":'Born a baby, Frank came into this worl not know a single word. As time passed he became smarter and is now learning how to code and is becoming a full stack web developer. ' , 
     }) 
     return artists[19]
   }
@@ -308,14 +308,17 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 console.log('task 7')
-function lotsOfArt(){
 
-   for ( i = 0; i < 10; i + 1 ) {
-     artists[i]
+function lotsOfArt(artists){
+
+   for (i = 0; i < artists.length; i++) {
+     if (artists[i].paintings > 100 ){ console.log(artists[i].name)}
    }
    
 }
-console.log(lotsOfArt());
+console.log(lotsOfArt(artists));
+
+
 
 
 
